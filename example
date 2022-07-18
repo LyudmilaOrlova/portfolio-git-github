@@ -52,4 +52,4 @@ git revert HEAD
 ./file.py > output.txt
 git add *
 git reset HEAD output.txt
-git commit -m ‘Remove changes
+git commit -m 'Remove changes'
