@@ -1,0 +1,55 @@
+# To create a git repository from scratch:
+
+mkdir new_directory
+cd new_directory
+git init
+touch new_file.py
+git add new_file.py
+git commit -m “Add an empty file new_file.py”
+
+# To clone a remote repository into a local workspace:
+
+git clone https://github.com/LyudmilaOrlova/portfolio-git-github.git
+cd portfolio-git-github/
+ls -l
+atom README.md
+git commit -a -m “Add one more line to README.md”
+git push
+
+# To delete the file:
+
+cd new_directory
+ls -l
+git rm old_file.py
+git commit -m “Delete unneeded file”
+
+# To rename the file:
+
+cd new_directory
+git mv old_file.py new_file.py
+git commit -m “New name for old_file.py”
+
+# To add changes to the most recent commit:
+
+cd new_directory
+touch file1.py
+touch file2.py
+git add file1.py
+git commit -m ‘Add new files - file1.py, file2.py’
+git add file2.py
+git commit - - amend
+
+# To create a new commit with inverse changes:
+
+cd new_directory
+atom file.py
+git commit -a -m ‘Add an experimental feature’
+./file.py
+git revert HEAD
+
+# To remove changes from the staging area:
+
+./file.py > output.txt
+git add *
+git reset HEAD output.txt
+git commit -m ‘Remove changes
